@@ -1,4 +1,4 @@
-package heraclius.utils.dispatcher
+package core.dispatcher
 
 
 typealias Listener<T> = (data: T) -> Unit

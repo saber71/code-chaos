@@ -1,4 +1,4 @@
-package heraclius.utils.dispatcher
+package core.dispatcher
 
 /**
  * 事件调度器类，用于管理和调度不同类型的事件
