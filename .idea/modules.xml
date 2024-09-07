@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/code-chaos.iml" filepath="$PROJECT_DIR$/.idea/code-chaos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sighs-of-sorcerers.iml" filepath="$PROJECT_DIR$/sighs-of-sorcerers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sighs-of-sorcerers.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sighs-of-sorcerers.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sighs-of-sorcerers.test.iml" filepath="$PROJECT_DIR$/.idea/modules/sighs-of-sorcerers.test.iml" />
     </modules>
   </component>
 </project>
