@@ -37,14 +37,23 @@ object Symbols {
     }
 
     /**
-     * 根据描述获取符号。
+     * 根据描述获取符号。会尝试从Symbol()括号中提取出描述
      *
      * @param description 要查找的符号的描述。
      * @return 匹配的符号及其描述的Map.Entry，如果未找到则返回null。
      */
     fun <V> from(description: String?): Symbol<V>? {
+        var key = description
+        if (description != null) {
+            // 使用正则表达式提取括号内的内容
+            val regex = Regex("Symbol\\((.*)\\)")
+            val matchResult = regex.find(description)
+            if (matchResult != null) {
+                key = matchResult.groupValues[1]
+            }
+        }
         @Suppress("UNCHECKED_CAST")
-        return descriptionMapSymbol[description]?.get() as Symbol<V>?
+        return descriptionMapSymbol[key]?.get() as Symbol<V>?
     }
 
     /**

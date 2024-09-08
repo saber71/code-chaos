@@ -15,7 +15,12 @@ class Dict(private val dataMap: MutableMap<Symbols.Symbol<*>, Any> = mutableMapO
         return this.dataMap[key] as V
     }
 
-    // 使用hashMap作为该对象的hashcode
+    // 复制本对象
+    fun clone(): Dict {
+        return Dict(dataMap.toMap().toMutableMap())
+    }
+
+    // 使用hashMap作为本对象的hashcode
     override fun hashCode(): Int {
         return dataMap.hashCode()
     }
@@ -27,7 +32,7 @@ class Dict(private val dataMap: MutableMap<Symbols.Symbol<*>, Any> = mutableMapO
 
     // 获取键值对
     operator fun <V> get(key: Symbols.Symbol<V>): V {
-        val result = this.dataMap[key] ?: throw RuntimeException("DataStoreKey not found")
+        val result = this.dataMap[key] ?: throw RuntimeException("$key not found")
         @Suppress("UNCHECKED_CAST")
         return result as V
     }
