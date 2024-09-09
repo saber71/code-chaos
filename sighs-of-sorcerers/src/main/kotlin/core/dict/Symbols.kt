@@ -50,6 +50,7 @@ object Symbols {
             val matchResult = regex.find(description)
             if (matchResult != null) {
                 key = matchResult.groupValues[1]
+                if (key.isEmpty()) key = null
             }
         }
         @Suppress("UNCHECKED_CAST")
