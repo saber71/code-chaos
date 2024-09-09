@@ -18,6 +18,6 @@ class Selector(vararg actions: Action, val memory: Boolean = false) : CompositeA
                 return status
             }
         }
-        return ActionStatus.SUCCESS
+        return ActionStatus.FAILURE
     }
 }

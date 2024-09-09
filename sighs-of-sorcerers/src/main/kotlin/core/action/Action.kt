@@ -5,18 +5,15 @@ abstract class Action {
 
     fun tick(): ActionStatus {
         beforeRun()
-        stop(run())
-        afterRun()
+        afterRun(run())
         return status
     }
 
     protected open fun beforeRun() {}
 
-    protected open fun afterRun() {}
-
     protected abstract fun run(): ActionStatus
 
-    open fun stop(newStatus: ActionStatus) {
+    open fun afterRun(newStatus: ActionStatus) {
         status = newStatus
     }
 }

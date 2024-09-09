@@ -4,11 +4,10 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/sighs-of-sorcerers">
       <excludeFolder url="file://$MODULE_DIR$/sighs-of-sorcerers/.gradle" />
-      <excludeFolder url="file://$MODULE_DIR$/sighs-of-sorcerers/.kotlin" />
       <excludeFolder url="file://$MODULE_DIR$/sighs-of-sorcerers/build" />
       <excludeFolder url="file://$MODULE_DIR$/sighs-of-sorcerers/gradle" />
     </content>
-    <orderEntry type="jdk" jdkName="openjdk-22" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
